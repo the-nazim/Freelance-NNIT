@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
         content="NNIT - Best IT Solution Companies In UAE. Specializing in CCTV, Access Control, IoT Automation, and Smart Office Solutions." />
-    <title>NNIT – Advanced ELV, Security & Automation Solutions</title>
+    <title>NNIT – Neuron Nexus Information Technology</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,14 +20,15 @@
     <header id="header">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="assets/logo.jpg" alt="NNIT Logo" />
-                <span>NNIT</span>
+                <img src="assets/logo.png" alt="NNIT Logo" />
+                <!-- <span>NNIT</span> -->
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="btn-nav">Contact Us</a></li>
                 </ul>
                 <div class="hamburger">
                     <span></span>
@@ -40,7 +41,11 @@
 
     <main>
         <section class="hero">
-            <div class="hero-bg"></div>
+            <div class="video-overlay"></div>
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="assets/hero-bg.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
             <div class="container hero-content">
                 <h1 class="animate-up">Let’s Invent Tomorrow</h1>
                 <p class="animate-up delay-1">
@@ -63,7 +68,10 @@
                 </div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="icon">👁️</div>
+                        <div class="icon">
+                            <img src="assets/cctv.png" alt="CCTV Icon"
+                                style="width: 55px; height: 55px; object-fit: contain;" />
+                        </div>
                         <h3>CCTV & Surveillance</h3>
                         <p>
                             State-of-the-art monitoring systems ensuring maximum security
@@ -71,7 +79,10 @@
                         </p>
                     </div>
                     <div class="service-card">
-                        <div class="icon">🔐</div>
+                        <div class="icon">
+                            <img src="assets/access-control.png" alt="CCTV Icon"
+                                style="width: 55px; height: 55px; object-fit: contain;" />
+                        </div>
                         <h3>Access Control</h3>
                         <p>
                             Secure and seamless entry management systems, biometric
@@ -146,44 +157,14 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
+        <section id="contact" class="contact-section" style="padding: 6rem 0; text-align: center;">
             <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2>Let's Start a Project</h2>
-                        <p>
-                            Ready to upgrade your security and automation? Contact NNIT
-                            today.
-                        </p>
-                        <ul class="contact-details">
-                            <li>📍 Dubai, United Arab Emirates</li>
-                            <li>📧 contact@nnit.com</li>
-                            <li>📞 +971 50 123 4567</li>
-                        </ul>
-                    </div>
-                    <form class="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Your Name" required />
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Your Email" required />
-                        </div>
-                        <div class="form-group">
-                            <select>
-                                <option class="select-option" value="" disabled selected>Interested in...</option>
-                                <option class="select-option" value="cctv">CCTV & Surveillance</option>
-                                <option class="select-option" value="access">Access Control</option>
-                                <option class="select-option" value="automation">IoT & Automation</option>
-                                <option class="select-option" value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Message" rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">
-                            Send Message
-                        </button>
-                    </form>
+                <div class="cta-content">
+                    <h2>Ready to Build the Future?</h2>
+                    <p style="margin-bottom: 2rem; color: var(--text-muted);">
+                        Partner with NNIT to unlock secure and scalable technology solutions.
+                    </p>
+                    <a href="contact.html" class="btn btn-primary">Get in Touch</a>
                 </div>
             </div>
         </section>

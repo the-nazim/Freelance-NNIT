@@ -133,15 +133,23 @@ ul {
   overflow: hidden;
 }
 
-.hero-bg {
+.hero-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    radial-gradient(circle at 20% 50%, rgba(0, 229, 255, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(41, 121, 255, 0.15) 0%, transparent 50%);
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 14, 23, 0.7); /* Dark overlay to improve text readability */
   z-index: -1;
 }
 
@@ -453,4 +461,137 @@ footer {
   .hamburger span {
     display: block; width: 25px; height: 3px; background: white; margin: 5px 0;
   }
+}
+
+/* 
+  Sub-Page Styles 
+*/
+.sub-hero {
+    height: 300px;
+    background: radial-gradient(circle at 50% 50%, rgba(41, 121, 255, 0.2) 0%, rgba(10, 14, 23, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.sub-hero h1 {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.sub-hero p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+}
+
+/* Active Nav State */
+.nav-links a.active {
+    color: var(--primary);
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+}
+
+/* About Page Specifics */
+.about-content-full {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content-full h2 {
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.about-content-full p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.mission-card {
+    background: var(--bg-card);
+    padding: 2rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+}
+
+.mission-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.why-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.why-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-muted);
+}
+
+.why-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+/* Service Page Specifics */
+.full-card {
+    border-top: 3px solid var(--primary);
+}
+
+.service-list {
+    margin-top: 1rem;
+    list-style: disc;
+    padding-left: 1.2rem;
+    color: var(--text-muted);
+}
+
+.service-list li {
+    margin-bottom: 0.5rem;
+}
+
+.cta-section {
+    padding: 6rem 0;
+    background: var(--bg-card);
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+}
+
+.cta-section h2 {
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Map Section */
+.map-section {
+    margin-top: -4rem; /* Overlap with contact form bottom padding */
+    z-index: 0;
 }
